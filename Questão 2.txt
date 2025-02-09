@@ -1,0 +1,27 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro vetor[8]
+        inteiro X, Y
+
+        // Ler os valores do vetor
+        para (inteiro i = 0; i < 8; i++)
+        {
+            escreva("Digite o valor ", i + 1, ": ")
+            leia(vetor[i])
+        }
+
+        // Ler os valores de X e Y
+        escreva("Digite a posição X: ")
+        leia(X)
+        escreva("Digite a posição Y: ")
+        leia(Y)
+
+        // Calcular a soma dos valores nas posições X e Y
+        inteiro soma = vetor[X] + vetor[Y]
+
+        // Apresentar a soma
+        escreva("A soma dos valores nas posições ", X, " e ", Y, " é: ", soma)
+    }
+}

@@ -1,0 +1,38 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro A
+        escreva("Digite a ordem da matriz identidade: ")
+        leia(A)
+
+        inteiro identidade[A][A]
+
+        // Começar a matriz identidade
+        para (inteiro i = 0; i < A; i++)
+        {
+            para (inteiro j = 0; j < A; j++)
+            {
+                se (i == j)
+                {
+                    identidade[i][j] = 1
+                }
+                senao
+                {
+                    identidade[i][j] = 0
+                }
+            }
+        }
+
+        // Mostrar a matriz identidade
+        escreva("Matriz identidade:\n")
+        para (inteiro i = 0; i < A; i++)
+        {
+            para (inteiro j = 0; j < A; j++)
+            {
+                escreva(identidade[i][j], " ")
+            }
+            escreva("\n")
+        }
+    }
+}

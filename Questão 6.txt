@@ -1,0 +1,73 @@
+programa
+{
+	funcao inicio ()
+	{
+
+
+       inteiro m, p, n
+        m = 2
+        p = 3
+        n = 2 
+		
+        inteiro A[10][10], B[10][10], C[10][10] 
+
+       //Ler a matriz A
+	   
+        escreva("Imforme os elementos da matriz A:\n")
+        para (inteiro i = 0; i < m; i++)
+        {
+            para (inteiro j = 0; j < p; j++)
+            {
+                escreva("A["+ i+ "]["+ j+ "]: ")
+                leia(A[i][j])
+            }
+        }
+
+        //Ler a matriz B
+
+        escreva("Informe os elementos da matriz B:\n")
+        para (inteiro i = 0; i < p; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                escreva("B["+ i+ "]["+ j+ "]: ")
+                leia(B[i][j])
+            }
+        }
+		
+		//Começar a matriz C
+
+        para (inteiro i = 0; i < m; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                C[i][j] = 0
+            }
+        }
+
+        // Calcular a matriz C
+
+        para (inteiro i = 0; i < m; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                para (inteiro k = 0; k < p; k++)
+                {
+                    C[i][j] = C[i][j] + A[i][k] * B[k][j]
+                }
+            }
+        }
+
+        //Mostrar a matriz C
+
+        escreva("Matriz C (produto de A e B):\n")
+        para (inteiro i = 0; i < m; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                escreva(C[i][j]+ " ")
+            }
+            escreva("\n")
+        }	
+	}
+}

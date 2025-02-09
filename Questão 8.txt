@@ -1,0 +1,45 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro n
+        inteiro simetrica = 1 
+
+        escreva("Digite a ordem da matriz: ")
+        leia(n)
+
+        inteiro matriz[n][n]
+
+        // Ler os elementos da matriz
+        para (inteiro i = 0; i < n; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                escreva("Digite o elemento [", i, "][", j, "]: ")
+                leia(matriz[i][j])
+            }
+        }
+
+        // Verificar se a matriz é simétrica
+        para (inteiro i = 0; i < n; i++)
+        {
+            para (inteiro j = 0; j < n; j++)
+            {
+                se (matriz[i][j] != matriz[j][i])
+                {
+                    simetrica = 0 
+                }
+            }
+        }
+
+        // Dizer se o valor indicando da matriz é simétrica
+        se (simetrica == 1)
+        {
+            escreva("Verdadeiro: A matriz é simétrica.\n")
+        }
+        senao
+        {
+            escreva("Falso: A matriz não é simétrica.\n")
+        }
+    }
+}

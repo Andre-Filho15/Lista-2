@@ -1,0 +1,28 @@
+programa
+{
+    funcao inicio()
+    {
+        real vetor[10]
+        real quadrado[10]
+
+        // Ler os números reais e armazenar no vetor
+        para (inteiro i = 0; i < 10; i++)
+        {
+            escreva("Digite o valor ", i + 1, ": ")
+            leia(vetor[i])
+        }
+
+        // Calcular o quadrado das componentes do vetor
+        para (inteiro i = 0; i < 10; i++)
+        {
+            quadrado[i] = vetor[i] * vetor[i]
+        }
+
+        // Apresentar os valores ao quadrado
+        escreva("Valores ao quadrado: ")
+        para (inteiro i = 0; i < 10; i++)
+        {
+            escreva(quadrado[i], " ")
+        }
+    }
+}
